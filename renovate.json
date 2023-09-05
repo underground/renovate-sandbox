@@ -1,0 +1,21 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "labels": ["renovate"],
+  "extends": ["config:base", "schedule:earlyMondays"],
+  "enabledManagers": ["npm", "cloudbuild"],
+  "timezone": "Asia/Tokyo",
+  "packageRules": [
+    {
+      "matchManagers": ["npm"],
+      "packagePatterns": ["*"]
+    }
+  ],
+  "vulnerabilityAlerts": {
+    "enabled": true,
+    "groupName": "vulnerability"
+  },
+  "cloudbuild": {
+    "fileMatch": ["(^|/)cloudbuild[^/]+.ya?ml$"]
+  }
+}
+
