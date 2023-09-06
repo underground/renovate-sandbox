@@ -1,7 +1,7 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "labels": ["renovate"],
-  "extends": ["config:base", "schedule:earlyMondays"],
+  "extends": ["config:base", "schedule:daily"],
   "enabledManagers": ["npm", "cloudbuild"],
   "timezone": "Asia/Tokyo",
   "packageRules": [
