@@ -7,6 +7,7 @@
   "packageRules": [
     {
       "matchManagers": ["npm"],
+      "matchUpdateTypes": ["minor", "patch", "digest"],
       "packagePatterns": ["*"]
     }
   ],
