@@ -1,13 +1,32 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "labels": ["renovate"],
-  "extends": ["config:base"],
+  "extends": ["config:base", "group:allNonMajor"],
   "enabledManagers": ["npm", "cloudbuild"],
   "timezone": "Asia/Tokyo",
+  "schedule": [
+    "after 10:00 before 18:00 every weekday"
+  ],
   "packageRules": [
     {
       "matchManagers": ["npm"],
-      "rangeStrategy": "bump"
+      "matchPackagePatterns": ["*"],
+    },
+    {
+      "matchManagers": ["npm"],
+      "packageNames": [
+        "react",
+        "react-dom",
+        "react-test-renderer",
+        "@types/react",
+        "@types/react-dom"
+      ],
+      "groupName": "react"
+    },
+    {
+      "matchManagers": ["npm"],
+      "matchPackagePatterns": ["eslint"],
+      "groupName": "eslint"
     }
   ],
   "vulnerabilityAlerts": {
