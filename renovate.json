@@ -7,8 +7,7 @@
   "packageRules": [
     {
       "matchManagers": ["npm"],
-      "rangeStrategy": "bump",
-      "packagePatterns": ["*"]
+      "rangeStrategy": "bump"
     }
   ],
   "vulnerabilityAlerts": {
