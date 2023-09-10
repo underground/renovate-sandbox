@@ -10,7 +10,7 @@
   "packageRules": [
     {
       "matchManagers": ["npm"],
-      "matchPackagePatterns": ["*"],
+      "matchPackagePatterns": ["*"]
     },
     {
       "matchManagers": ["npm"],
