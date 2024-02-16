@@ -10,7 +10,9 @@
   "packageRules": [
     {
       "matchManagers": ["npm"],
-      "matchPackagePatterns": ["*"]
+      "matchPackagePatterns": ["*"],
+      "matchUpdateTypes": ["major"],
+      "groupName": "all major dependencies"
     },
     {
       "matchManagers": ["npm"],
